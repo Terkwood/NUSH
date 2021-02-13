@@ -1,6 +1,6 @@
 # NUSH
 
-The plan is to implement a subset of [TinyMUSH](https://en.wikipedia.org/wiki/MUSH) in... Racket? Haskell? Nim? 
+The plan is to implement a subset of [TinyMUSH](https://github.com/TinyMUSH/TinyMUSH) in... Racket? Haskell? Nim? 
 
 ## Haskell
 
