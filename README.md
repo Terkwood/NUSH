@@ -14,3 +14,9 @@ Now you can create Objects:
 let t = Thing
 let p = Player
 ```
+
+Or you can run a trivial program:
+
+```sh
+stack run
+```
