@@ -1,10 +1,6 @@
 module Lib
-    ( someFunc,
-        Object
-    ) where
+  ( Object (..),
+  )
+where
 
-
-data Object = Player | Room | Thing | Exit | Trash
-
-someFunc :: IO ()
-someFunc = putStrLn "someFunc"
+data Object = Player | Room | Thing | Exit | Trash deriving (Show)
