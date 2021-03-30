@@ -5,5 +5,5 @@ The plan is to implement a subset of [TinyMUSH](https://github.com/TinyMUSH/Tiny
 ## For Example
 
 ```haskell
-data Stuff = Player | Room | Thing | Exit | Trash
+data Object = Player | Room | Thing | Exit | Trash
 ```
