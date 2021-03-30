@@ -1,0 +1,1 @@
+data Object = Player | Room | Thing | Exit | Trash
