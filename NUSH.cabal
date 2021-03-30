@@ -7,7 +7,7 @@ cabal-version: 1.12
 -- hash: e7cd209fab9911314a601ba772bf25dcbcb2a2c61ac91208e819b1545a5d0832
 
 name:           NUSH
-version:        0.0.1-a
+version:        0.0.1.0
 description:    Please see the README on GitHub at <https://github.com/githubuser/NUSH#readme>
 homepage:       https://github.com/githubuser/NUSH#readme
 bug-reports:    https://github.com/githubuser/NUSH/issues
