@@ -4,13 +4,15 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: e7cd209fab9911314a601ba772bf25dcbcb2a2c61ac91208e819b1545a5d0832
+-- hash: ac49325078ad7f24cd4463354ccf560a360dac1517857e036df5c11fbb7f49aa
 
 name:           NUSH
 version:        0.0.1.0
 description:    Please see the README on GitHub at <https://github.com/terkwood/NUSH#readme>
 homepage:       https://github.com/terkwood/NUSH#readme
 bug-reports:    https://github.com/terkwood/NUSH/issues
+author:         Terkwood
+maintainer:     Terkwood
 copyright:      2021 Terkwood
 license:        MIT
 license-file:   LICENSE
