@@ -1,11 +1,18 @@
 module Lib
-  ( Object (..),
+  ( NUSH (..),
+    Object (..),
     Attrs (..),
     DbRef (..),
     Player (..),
+    Room (..),
+    Thing (..),
+    Exit (..),
+    Trash (..),
     Owner (..),
   )
 where
+
+newtype NUSH = NUSH [Object] deriving (Show)
 
 data Object = PLAYER Player | ROOM Room | THING Thing | EXIT Exit | TRASH Trash deriving (Show)
 
