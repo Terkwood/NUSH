@@ -1,9 +1,12 @@
 module Lib
   ( Object (..),
     DbRef (..),
+    Attrs (..),
   )
 where
 
 newtype DbRef = DbRef Word deriving (Show)
 
-data Object = Player {id :: DbRef} | Room {id :: DbRef} | Thing {id :: DbRef} | Exit {id :: DbRef} | Trash {id :: DbRef} deriving (Show)
+newtype Attrs = Attrs {id :: DbRef} deriving (Show)
+
+data Object = Player Attrs | Room Attrs | Thing Attrs | Exit Attrs | Trash Attrs deriving (Show)
