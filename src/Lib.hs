@@ -9,6 +9,7 @@ module Lib
     Exit (..),
     Trash (..),
     Owner (..),
+    Flag (..),
   )
 where
 
@@ -26,8 +27,10 @@ newtype Exit = Exit Attrs deriving (Show)
 
 newtype Trash = Trash Attrs deriving (Show)
 
-data Attrs = Attrs {id :: DbRef, owner :: Owner} deriving (Show)
+data Attrs = Attrs {id :: DbRef, owner :: Owner, flags :: [Flag]} deriving (Show)
 
 data Owner = Self | Other Player deriving (Show)
+
+data Flag = Wizard | Connected deriving (Show)
 
 newtype DbRef = DbRef Word deriving (Show)
