@@ -13,7 +13,9 @@ module Lib
   )
 where
 
-newtype NUSH = NUSH [Object] deriving (Show)
+import qualified Data.Map as Map
+
+newtype NUSH = NUSH (Map.Map DbRef Object) deriving (Show)
 
 data Object = PLAYER Player | ROOM Room | THING Thing | EXIT Exit | TRASH Trash deriving (Show)
 
@@ -33,4 +35,4 @@ data Owner = Self | Other Player deriving (Show)
 
 data Flag = Wizard | Connected deriving (Show)
 
-newtype DbRef = DbRef Word deriving (Show)
+newtype DbRef = DbRef Word deriving (Show, Ord, Eq)

@@ -1,12 +1,17 @@
 module Main where
 
+import qualified Data.Map as Map
 import Lib
 
-limbo = Room Attrs {Lib.id = DbRef 0, owner = Other wiz, flags = []}
+limboId = DbRef 0
 
-wiz = Player Attrs {Lib.id = DbRef 1, owner = Self, flags = [Connected]}
+limbo = Room Attrs {Lib.id = limboId, owner = Other wiz, flags = []}
 
-game = NUSH [ROOM limbo, PLAYER wiz]
+wizId = DbRef 1
+
+wiz = Player Attrs {Lib.id = wizId, owner = Self, flags = [Connected]}
+
+game = NUSH $ Map.fromList [(limboId, ROOM limbo), (wizId, PLAYER wiz)]
 
 main :: IO ()
 main = print game

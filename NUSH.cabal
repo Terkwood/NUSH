@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: ac49325078ad7f24cd4463354ccf560a360dac1517857e036df5c11fbb7f49aa
+-- hash: f6a2a5603fcd81729576ce4b535b365aee29b19af933fb4605edfc3b5ca083ef
 
 name:           NUSH
 version:        0.0.1.0
@@ -34,6 +34,7 @@ library
       src
   build-depends:
       base >=4.7 && <5
+    , containers
   default-language: Haskell2010
 
 executable NUSH-exe
@@ -46,6 +47,7 @@ executable NUSH-exe
   build-depends:
       NUSH
     , base >=4.7 && <5
+    , containers
   default-language: Haskell2010
 
 test-suite NUSH-test
@@ -59,4 +61,5 @@ test-suite NUSH-test
   build-depends:
       NUSH
     , base >=4.7 && <5
+    , containers
   default-language: Haskell2010
