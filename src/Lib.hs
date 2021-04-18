@@ -15,7 +15,7 @@ where
 
 import qualified Data.Map as Map
 
-newtype NUSH = NUSH (Map.Map DbRef Object) deriving (Show)
+newtype NUSH = NUSH {nush :: Map.Map DbRef Object} deriving (Show)
 
 data Object = PLAYER Player | ROOM Room | THING Thing | EXIT Exit | TRASH Trash deriving (Show)
 

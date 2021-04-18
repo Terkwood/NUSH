@@ -13,5 +13,7 @@ wiz = Player Attrs {Lib.id = wizId, owner = Self, flags = [Connected]}
 
 game = NUSH $ Map.fromList [(limboId, ROOM limbo), (wizId, PLAYER wiz)]
 
+found = Map.lookup (DbRef 0) $ nush game
+
 main :: IO ()
-main = print game
+main = print found
