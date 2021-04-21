@@ -10,6 +10,7 @@ module Lib
     Trash (..),
     Owner (..),
     Flag (..),
+    makeNush,
   )
 where
 
@@ -36,3 +37,13 @@ data Owner = Self | Other Player deriving (Show)
 data Flag = Wizard | Connected deriving (Show)
 
 newtype DbRef = DbRef Word deriving (Show, Ord, Eq)
+
+objId :: Object -> DbRef
+objId (PLAYER (Player p)) = Lib.id p
+objId (ROOM (Room r)) = Lib.id r
+objId (THING (Thing t)) = Lib.id t
+objId (EXIT (Exit e)) = Lib.id e
+objId (TRASH (Trash t)) = Lib.id t
+
+makeNush :: [Object] -> NUSH
+makeNush objs = Map.fromList (map (\o -> (objId o, o)) objs)
