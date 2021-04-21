@@ -30,7 +30,7 @@ newtype Exit = Exit Attrs deriving (Show)
 
 newtype Trash = Trash Attrs deriving (Show)
 
-data Attrs = Attrs {id :: DbRef, owner :: Owner, flags :: [Flag]} deriving (Show)
+data Attrs = Attrs {id :: DbRef, owner :: Owner, flags :: [Flag], name :: String} deriving (Show)
 
 data Owner = Self | Other Player deriving (Show)
 
